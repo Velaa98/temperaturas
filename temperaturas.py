@@ -9,3 +9,9 @@ def obtener_id_municipio(municipio):
 		return id
 	print('El municipio no existe')
 	sys.exit()
+
+def temperaturas(municipio):
+	url = etree.parse('http://www.aemet.es/xml/municipios/localidad_'+obtener_id_municipio(municipio)+'.xml')
+	maxi = url.xpath("//temperatura/maxima/text()")[0]
+	mini = url.xpath("//temperatura/minima/text()")[0]
+	print(municipio,maxi,mini)
