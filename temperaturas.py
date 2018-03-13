@@ -15,3 +15,7 @@ def temperaturas(municipio):
 	maxi = url.xpath("//temperatura/maxima/text()")[0]
 	mini = url.xpath("//temperatura/minima/text()")[0]
 	print('Hoy en %s la temperatura máxima es %sº y la mínima %sº' % (municipio,maxi,mini))
+
+
+municipio = input('Dime un municipio: ')
+temperaturas(municipio)
