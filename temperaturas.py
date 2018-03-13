@@ -7,7 +7,7 @@ def obtener_id_municipio(municipio):
 	if id != []:
 		id = id[0][-5:]
 		return id
-	print('El municipio no existe')
+	print('El municipio no existe o está mal escrito.')
 	sys.exit()
 
 def temperaturas(municipio):
